@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To My Rafa ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader"><div><div class="heart-loader">❤️</div><h2>Preparing Something Special For My Baby...</h2></div></div>
+<div id="petals" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="tools">
+  <button id="themeBtn" aria-label="Toggle dark mode">🌙</button>
+  <button id="musicBtn" aria-label="Toggle music">🎵 Music</button>
+</div>
+<audio id="bgMusic" loop><source src="assets/music/song.mp3" type="audio/mpeg"></audio>
+
+<section id="lock" class="gate">
+  <div class="glass card"><div class="big">🌹</div><h1>For My Rafa</h1>
+    <p>Enter our special date to unlock the little world I made for you ❤️</p>
+    <input type="password" id="passcode" maxlength="4" inputmode="numeric" placeholder="Our anniversary?" aria-label="Passcode">
+    <button class="btn" id="unlockBtn">Unlock Our Story</button><p id="errorText" role="alert"></p></div>
+</section>
+
+<section id="gate2" class="gate" hidden>
+  <div class="glass card"><div class="big">💍</div><h1>Will you be my forever?</h1>
+    <p id="noMsg">Take your time, baby ❤️</p>
+    <div class="yesno" id="yesno"><button class="btn" id="yesBtn">❤️ Yes</button><button class="btn ghost" id="noBtn">💔 No</button></div></div>
+</section>
+
+<main id="main" hidden>
+<section class="hero" data-sec="welcome"><div>
+  <p class="mini">A little corner of the internet</p>
+  <h1>Welcome, My Baby ❤️</h1>
+  <p>This little world was made for you. Every memory, every letter, every photo, and every moment here is a reminder of how much you mean to me.</p>
+  <p>Thank you for being my happiness, my comfort, my best friend, and the most beautiful chapter of my life.</p>
+  <button class="btn" data-go="counter">Explore Our Story ↓</button></div></section>
+
+<section class="sec" id="counter" data-sec="counter"><h2>Days With You Officially</h2>
+  <div class="count-grid">
+    <div class="glass stat"><b id="cDays">0</b><span>❤️ Days Together</span></div>
+    <div class="glass stat"><b id="cWeeks">0</b><span>🌙 Weeks Together</span></div>
+    <div class="glass stat"><b id="cMonths">0</b><span>💌 Months Together</span></div>
+  </div>
+  <p class="clock glass" id="clock" aria-live="off"></p><p class="sub">⏳ Counting every second with you</p></section>
+
+<section class="sec" data-sec="appreciation"><h2>Why You're Special</h2>
+  <div class="grid">
+    <div class="glass tile"><span>🌹</span><h3>Your Kind Heart</h3><p>You always care for the people you love, even when you're tired.</p></div>
+    <div class="glass tile"><span>✨</span><h3>Your Strength</h3><p>You keep going even when life becomes difficult.</p></div>
+    <div class="glass tile"><span>☀️</span><h3>Your Smile</h3><p>One smile from you can brighten my entire day.</p></div>
+    <div class="glass tile"><span>❤️</span><h3>Your Love</h3><p>You make me feel loved in ways words cannot explain.</p></div>
+  </div></section>
+
+<section class="sec" data-sec="timeline"><h2>Our Love Story</h2><ol class="timeline" id="timeline"></ol></section>
+
+<section class="sec" data-sec="letters"><h2>Love Letters</h2><p class="sub">Open each one. There's a secret one waiting.</p>
+  <div class="letter-shelf" id="shelf"></div>
+  <article class="paper" id="paper" hidden><button class="mark" id="markBtn" aria-label="Bookmark this letter">🔖</button><h3 id="paperTitle"></h3><div id="typed" class="typed"></div></article></section>
+
+<section class="sec" data-sec="memories"><h2>Memory Box</h2>
+  <div class="tabs" id="tabs"></div><div class="gallery" id="gallery"></div></section>
+
+<section class="sec" data-sec="reasons"><h2>Reasons Why I Love You</h2><p class="sub">Hover or tap a card to flip it.</p><div class="reasons" id="reasons"></div></section>
+
+<section class="sec" data-sec="notes"><h2>Love Notes Wall</h2><p class="sub">Drag them around.</p><div class="wall" id="wall"></div></section>
+
+<section class="sec" data-sec="future">
+  <h2>Our Future</h2>
+
+  <div class="grid">
+
+    <div class="glass tile">
+      <span>📸</span>
+      <h3>More Memories</h3>
+      <p>
+        More pictures together, more random moments,
+        more stories we'll laugh about someday,
+        and more memories we'll keep close to our hearts.
+      </p>
+    </div>
+
+    <div class="glass tile">
+      <span>🌷</span>
+      <h3>Your Dreams</h3>
+      <p>
+        I want to be there for every goal you achieve,
+        every challenge you overcome,
+        and every dream you turn into reality.
+      </p>
+    </div>
+
+    <div class="glass tile">
+      <span>🤍</span>
+      <h3>Choosing You</h3>
+      <p>
+        No matter how much time passes,
+        I hope we continue choosing each other,
+        supporting each other,
+        and growing together.
+      </p>
+    </div>
+
+    <div class="glass tile">
+      <span>♾️</span>
+      <h3>To Infinity And Beyond</h3>
+      <p>
+        I don't know what the future holds,
+        but one thing I know for sure is that
+        my favorite future will always be the one with you in it.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="sec" id="surprise" data-sec="surprise"><h2>One More Thing...</h2>
+  <p class="sub" id="progress"></p>
+  <button class="btn" id="surpriseBtn" disabled>🔒 Locked</button>
+  <div id="final" hidden>
+    <h3 class="thanks">Thank you for choosing me every day.</h3>
+    <video controls playsinline poster="assets/photos/1.jpg"><source src="assets/video/surprise.mp4" type="video/mp4"></video>
+    <p>You are more than enough. Always have been. Always will be. ❤️</p>
+    <div class="moon">🌙</div>
+    <h3>Thank You For Existing, My Baby ❤️</h3>
+    <p>No matter where life takes us, I will always be your number one fan, your safe place, and your home.</p>
+    <h3>To Infinity And Beyond ❤️</h3></div></section>
+</main>
+
+<div id="lightbox" hidden><button id="closeLb" aria-label="Close">✕</button><img id="lbImg" alt=""></div>
+<script src="script.js"></script>
+</body></html>
